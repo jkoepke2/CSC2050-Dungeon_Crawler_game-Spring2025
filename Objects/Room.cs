@@ -26,7 +26,35 @@ public class Room
     public void tryToTakeExit(string direction)
     {
         if(this.hasExit(direction))
-        {
+        { 
+
+
+            if(String.Equals(direction, "north"))
+            {
+                this.thePlayer = null;
+                this.thePlayer.setCurrentRoom(this.availableExits[0].getDestination());
+                setPlayer(thePlayer);
+            }
+            else if(String.Equals(direction, "south"))
+            {
+                this.thePlayer = null;
+                this.thePlayer.setCurrentRoom(this.availableExits[1].getDestination());
+                setPlayer(thePlayer);
+            }
+            else if(String.Equals(direction, "east"))
+            {
+                this.thePlayer = null;
+                this.thePlayer.setCurrentRoom(this.availableExits[2].getDestination());
+                setPlayer(thePlayer);
+            }
+            else if(String.Equals(direction, "west"))
+            {
+                this.thePlayer = null;
+                this.thePlayer.setCurrentRoom(this.availableExits[3].getDestination());
+                setPlayer(thePlayer);
+            }
+            
+
             //remove the player from the current room
             //place them in the destination room in that direction
             //update the room the player is currently in so the room exits visually update

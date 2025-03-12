@@ -37,18 +37,30 @@ public class RoomManager : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.UpArrow))
         {
+            resetRoom();
+            setupRoom();
+            Core.thePlayer.getCurrentRoom().tryToTakeExit("north");
             //try to goto the north
         }
         else if(Input.GetKeyDown(KeyCode.LeftArrow))
         {
+            resetRoom();
+            setupRoom();
+            Core.thePlayer.getCurrentRoom().tryToTakeExit("west");
             //try to goto the west
         }
         else if(Input.GetKeyDown(KeyCode.RightArrow))
         {
+            resetRoom();
+            setupRoom();
+            Core.thePlayer.getCurrentRoom().tryToTakeExit("east");
             //try to goto the east
         }
         else if(Input.GetKeyDown(KeyCode.DownArrow))
         {
+            resetRoom();
+            setupRoom();
+            Core.thePlayer.getCurrentRoom().tryToTakeExit("south");
             //try to goto the south
         }
     }
