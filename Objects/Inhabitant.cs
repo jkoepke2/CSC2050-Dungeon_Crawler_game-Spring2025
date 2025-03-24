@@ -2,8 +2,8 @@ using UnityEngine;
 
 public abstract class Inhabitant
 {
-    protected int currHp;
-    protected int maxHp;
+    public int currHp;
+    public int maxHp;
     protected int ac;
     protected string name;
 
